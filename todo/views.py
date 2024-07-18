@@ -15,6 +15,7 @@ def index(request):
         task = Task(
             title=request.POST["title"],
             due_at=due_at,
+            priority=request.POST["priority"]
         )
         task.save()
     if request.GET.get("order") == "due":
